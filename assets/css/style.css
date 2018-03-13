@@ -1,0 +1,55 @@
+.element {
+  display: inline-block;
+  background-color: #0074d9;
+  height: auto;
+  width: auto;
+  font-size: 1px;
+  padding: 1px;
+  color: white;
+  margin-right: 5px;
+  margin-left: 5px;
+  -webkit-animation: skew 10s infinite;
+  animation: skew 5s infinite;
+  -webkit-transform: skew(5deg);
+  transform: skew(5deg);
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  opacity: .7;
+}
+
+@-webkit-keyframes skew {
+  0% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+  }
+  100% {
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+}
+
+@keyframes skew {
+  0% {
+    -webkit-transform: skewX(20deg);
+    transform: skewX(20deg);
+  }
+  100% {
+    -webkit-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+  }
+}
+body, html {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
