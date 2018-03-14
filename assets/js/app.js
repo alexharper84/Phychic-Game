@@ -23,6 +23,7 @@ function compWin() {
 function userEntered(keyStroke) {
   remainingGuess--;
   userInput.push(keyStroke);
+  console.log(keyStroke);
 }
 
 function gameRender() {
@@ -40,6 +41,7 @@ function gameRender() {
 // this collects user input
 document.onkeydown = function(event) {
   var userKeyStroke = event.key;
+  console.log(event.key);
   if (userKeyStroke === computerChoice) {
     userWin();
   } else if (remainingGuess - 1 === 0) {
