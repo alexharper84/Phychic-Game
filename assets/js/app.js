@@ -8,6 +8,7 @@ var remainingGuess, userInput, computerChoice;
 // problem is there is  one off error i can't quite fix
 function gameStart() {
   remainingGuess = 10;
+  // one off error is probably due to userInput
   userInput = [];
   computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
 }
@@ -29,7 +30,6 @@ function userEntered(keyStroke) {
   console.log(keyStroke);
 }
 
-// this converts user input into content
 function gameRender() {
   var userWinGame = document.getElementById("userWinner");
   var compWinGame = document.getElementById("compWinner");
