@@ -4,6 +4,8 @@ var userWins = 0;
 var compWins = 0;
 var remainingGuess, userInput, computerChoice;
 
+// this starts the game
+// problem is there is  one off error i can't quite fix
 function gameStart() {
   remainingGuess = 10;
   userInput = [];
@@ -20,12 +22,14 @@ function compWin() {
   gameStart();
 }
 
+// captures keystroke to create variable
 function userEntered(keyStroke) {
   remainingGuess--;
   userInput.push(keyStroke);
   console.log(keyStroke);
 }
 
+// this converts user input into content
 function gameRender() {
   var userWinGame = document.getElementById("userWinner");
   var compWinGame = document.getElementById("compWinner");
@@ -41,7 +45,6 @@ function gameRender() {
 // this collects user input
 document.onkeydown = function(event) {
   var userKeyStroke = event.key;
-  console.log(event.key);
   if (userKeyStroke === computerChoice) {
     userWin();
   } else if (remainingGuess - 1 === 0) {
